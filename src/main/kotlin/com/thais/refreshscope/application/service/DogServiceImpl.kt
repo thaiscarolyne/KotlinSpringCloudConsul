@@ -5,13 +5,13 @@ import com.thais.refreshscope.application.port.DogService
 import org.springframework.stereotype.Service
 
 @Service
-class DogServiceImpl(private val configuration: Configuration): DogService {
+class DogServiceImpl(var configuration: Configuration): DogService {
 
     override fun getName(): String {
-        return configuration.name
+        return configuration.getName()
     }
 
     override fun getAge(): Int {
-        return configuration.age
+        return  configuration.getAge()
     }
 }
